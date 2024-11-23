@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Images/favicon.png" alt="My Blog Favicon">
+    <title>The 2024 Ballon d'Or and Controversies</title>
+</head>
+<body>
+
+    <header>
+        <h1>Blog Board+</h1>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>The 2024 Ballon d'Or: Triumph, Legacy, and Controversy</h2>
+            <p><time datetime="2024-10-28">October 28, 2024</time></p>
+
+            <p>
+                The Ballon d'Or stands as one of the most coveted individual awards in football, honoring the very best player in the world for their performances over the past year. Each year, fans, analysts, and players alike eagerly await the announcement, fueling debates and discussions long before the trophy is handed over.
+                <figure>
+                    <img src="Images/ballond'or.png" alt="THE BALLON D'OR." />
+                    <figcaption>THE BALLON D'OR.</figcaption>
+                </figure>
+            </p>
+
+            <p>
+                In 2024, the award didn't just crown a winner—it ignited a storm of controversy. While the official recipient etched their name into footballing history, questions swirled: Was the decision truly reflective of the year's best performances? Or did politics, narratives, and biases overshadow sporting merit?
+            </p>
+
+            <h2>The Winner</h2>
+            <p>
+                This year, the Ballon d'Or was awarded to <strong>Rodri</strong>. With breathtaking performances in both domestic leagues and international tournaments, he was undeniably one of the standout players. His contributions and importance to his teams made him the world's best player and a pivotal role in securing his club's <em>Premier League</em> victory. He also won the EUROs with his national team Spain, edging out the runner-up, Vini Jr.
+            </p>
+            <figure>
+                <img src="Images/rodri.png" alt="Rodri holding the 2024 Ballon d'Or trophy" />
+                <figcaption>Rodri holding the 2024 Ballon d'Or trophy.</figcaption>
+            </figure>
+
+            <h2>The Controversies</h2>
+            <p>
+                Despite his brilliance, many fans and analysts argued that the award should have gone to <strong>Vini Jr</strong>. Supporters of the runner-up cited his consistent dominance and clutch performances in critical matches, such as his heroics in the <em>UEFA Champions League</em>.
+            </p>
+            <p>
+                Adding fuel to the fire, some speculated that factors like popularity and media narratives heavily influenced the decision. A segment of fans even took to social media, trending hashtags like <em>#BallonDorRobbery</em>.
+            </p>
+            <figure>
+                <img src="Images/vini.png" alt="Vini Jr, Ballon d'Or runner-up" />
+                <figcaption>Some fans worldwide believe Vini Jr deserved the Ballon d'Or decision.</figcaption>
+            </figure>
+
+            <h2>Player and Fan Reactions</h2>
+            <p>
+                After the announcement, the footballing world reacted passionately. The winner expressed gratitude, dedicating the trophy to their team and fans. Meanwhile, the runner-up humbly congratulated the winner but subtly reminded the world of their own incredible year.
+            </p>
+            <p>
+                Fans were split, with heated debates breaking out across platforms. Some celebrated the decision as just, while others labeled it a travesty.
+            </p>
+
+            <h2>Looking Ahead</h2>
+            <p>
+                The 2024 Ballon d'Or may be remembered as much for the controversies as for the winner's achievements. As the footballing world moves forward, the debate highlights the subjective nature of awards in a sport filled with extraordinary talent.
+            </p>
+            <p>
+                One thing is certain: the 2025 season will be another fierce competition, with players aiming to leave no doubt about their claim to the next Ballon d'Or.
+            </p>
+        </article>
+
+        
+        <section class="comments-section">
+            <h2>Comments</h2>
+            
+        
+            <div id="comments-list">
+                <p> Who is your winner?</p>
+                <p>No comments yet. Be the first to leave a comment!</p>
+            </div>
+
+            <!-- Comment Form -->
+            <form id="comment-form">
+                <label for="comment-name">Your Name:</label>
+                <input type="text" id="comment-name" name="name" required aria-label="Your Name">
+                
+                <label for="comment-text">Your Comment:</label>
+                <textarea id="comment-text" name="comment" rows="4" required aria-label="Your Comment"></textarea>
+                
+                <button type="submit">Submit Comment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('comment-form');
+        const commentsList = document.getElementById('comments-list');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+        
+            const name = document.getElementById('comment-name').value.trim();
+            const comment = document.getElementById('comment-text').value.trim();
+        
+            if (!name || !comment) {
+                alert("Please fill in both your name and comment.");
+                return;
+            }
+        
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment';
+            commentElement.innerHTML = `<strong>${name}</strong>: ${comment}`;
+        
+            if (commentsList.querySelector('p')) {
+                commentsList.innerHTML = '';
+            }
+            commentsList.appendChild(commentElement);
+        
+            form.reset();
+            alert("Your comment has been submitted!");
+        });
+    </script>
+</body>
+</html>
